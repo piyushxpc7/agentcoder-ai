@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: agentcoder-backend
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn backend.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: HUGGINGFACE_API_KEY
+        sync: false
+      - key: DEFAULT_MODEL
+        value: hf/Qwen/Qwen2.5-Coder-32B-Instruct
+
+  - type: web
+    name: agentcoder-frontend
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run frontend/app.py --server.port $PORT --server.address 0.0.0.0
+    envVars:
+      - key: API_URL
+        fromService:
+          name: agentcoder-backend
+          type: web
+          property: host
