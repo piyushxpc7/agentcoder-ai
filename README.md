@@ -2,6 +2,8 @@
 
 An intelligent code generation and analysis platform powered by **Pydantic AI** agents and **Streamlit**.
 
+Run it here: https://codeaiagent.streamlit.app/
+
 ![Python](https://img.shields.io/badge/Python-3.10+-blue)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.31+-red)
 ![License](https://img.shields.io/badge/License-MIT-green)
