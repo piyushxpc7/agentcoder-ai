@@ -2,6 +2,7 @@ services:
   - type: web
     name: agentcoder-backend
     runtime: python
+    plan: free
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn backend.main:app --host 0.0.0.0 --port $PORT
     envVars:
@@ -15,6 +16,7 @@ services:
   - type: web
     name: agentcoder-frontend
     runtime: python
+    plan: free
     buildCommand: pip install -r requirements.txt
     startCommand: streamlit run frontend/app.py --server.port $PORT --server.address 0.0.0.0
     envVars:
