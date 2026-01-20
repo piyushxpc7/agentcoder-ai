@@ -110,13 +110,11 @@ agentcoder-ai/
 | `CHUNK_SIZE` | PDF chunk size (chars) | `500` |
 | `CHUNK_OVERLAP` | Chunk overlap (chars) | `50` |
 
-### Supported Models
+Supported Models
 
-- `anthropic/claude-3.5-sonnet`
-- `openai/gpt-4-turbo`
-- `openai/gpt-4o`
-- `google/gemini-pro-1.5`
-- `meta-llama/llama-3.1-70b-instruct`
+qwen/qwen-2.5-coder-32b-instruct (Default - Optimized for coding)
+meta-llama/llama-3.1-8b-instruct
+meta-llama/llama-3.3-70b-instruct
 
 ## ☁️ Deployment
 
